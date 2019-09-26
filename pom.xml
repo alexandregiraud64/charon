@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.agiraud.charon</groupId>
+  <artifactId>charon</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  
+  <name>Charon</name>
+  <description>Fully customizable oauth server based on Spring security Oauth2</description>
+  <url>http://maven.apache.org</url>
+ 
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.7.RELEASE</version>
+    <relativePath /> <!-- lookup parent from repository -->
+  </parent>
+	
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+    <spring-security-oauth2.version>2.3.6.RELEASE</spring-security-oauth2.version>
+  </properties>
+ 
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security.oauth</groupId>
+      <artifactId>spring-security-oauth2</artifactId>
+      <version>${spring-security-oauth2.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+    
+    <!-- Scope PROVIDED -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    
+    <!-- Scope COMPILE -->
+    <dependency>
+      <groupId>org.thymeleaf.extras</groupId>
+      <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    
+    <!-- Scope TEST -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+	
+  <modules>
+    <module>../charon-authorization-server</module>
+    <module>../charon-authorization-server-cassandra</module>
+    <module>../charon-core</module>
+    <module>../charon-core-cassandra</module>
+    <module>../charon-resource-server</module>
+    <module>../charon-resource-server-cassandra-example</module>
+    <module>../charon-resource-server-cassandra-users</module>
+    <module>../charon-resource-server-cassandra-clients</module>
+  </modules>
+  
+</project>
