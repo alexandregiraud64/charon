@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.agiraud.charon</groupId>
   <artifactId>charon</artifactId>
-  <version>1.0.0</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   
   <name>Charon</name>
@@ -49,7 +49,7 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-thymeleaf</artifactId>
     </dependency>
-    
+		
     <!-- Scope PROVIDED -->
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -88,14 +88,13 @@
   </dependencies>
 	
   <modules>
-    <module>../charon-authorization-server</module>
-    <module>../charon-authorization-server-cassandra</module>
     <module>../charon-core</module>
     <module>../charon-core-cassandra</module>
+    <module>../charon-authorization-server</module>
     <module>../charon-resource-server</module>
-    <module>../charon-resource-server-cassandra-example</module>
+    <module>../charon-authorization-server-cassandra</module>
+    <module>../charon-resource-server-cassandra-manager</module>
     <module>../charon-resource-server-cassandra-users</module>
-    <module>../charon-resource-server-cassandra-clients</module>
   </modules>
   
 </project>
