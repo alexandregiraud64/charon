@@ -20,7 +20,7 @@ For example, to have an OAuth server using a Cassandra Database, you wil also ne
 - The resource server web application (see charon-resource-server-cassandra-manager or charon-resource-server-cassandra-users)
 
 Notes:
-The resource server design allows to use it as a web services or as a monolithic application.
+The resource server design allows to use it as micro services or as a monolithic application.
 The "charon-resource-server-cassandra-manager" is an example of interface using Thymeleaf allowing to create its own clients and to manage users.
 The "charon-resource-server-cassandra-users" is an example of REST API using scope to give access to the data.
 
